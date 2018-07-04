@@ -11,36 +11,21 @@ body {font-family: "Raleway", Arial, sans-serif}
 .w3-row img {margin-bottom: -8px}
 .mySlides {display:none}
 </style>
-<body class="w3-content" style="max-width:1200px;">
-
-<!-- Navbar -->
-<div class="w3-top" style="max-width:1200px;">
-  <div class="w3-bar w3-white w3-xlarge w3-padding-16 w3-border-bottom w3-border-grey">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-large w3-white" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-left w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="#" class="w3-right w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Link 1</a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-border-bottom w3-border-grey">Link 1</a>
-  </div>
-</div>
-
+<body>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-content" style="padding:128px 16px">
+<div class="w3-content" style="max-width:1500px">
 
-  <!-- Header
+  <!-- Header -->
   <header class="w3-container w3-xlarge w3-padding-16 w3-border-bottom w3-border-grey w3-margin-bottom w3-margin-top">
     <a href="#" class="w3-left w3-button w3-white">MY ART</a>
     <a href="#about" class="w3-right w3-button w3-white">About</a>
-  </header>-->
+  </header>
 
   <!-- Slideshow -->
-  <div class="w3-content w3-row" style="max-width:800px;">
-    <img class="mySlides" src="/images/art.png" style="width:100%;max-height:500px;">
-    <img class="mySlides" src="/images/art2.png" style="width:100%;max-height:500px;">
+  <div class="w3-content" style="max-width:800px;">
+    <img class="mySlides" src="/images/art.png" style="width:100%;height:500px;">
+    <img class="mySlides" src="/images/art2.png" style="width:100%;height:500px;">
   </div>
 
   <div class="w3-center">
@@ -56,8 +41,27 @@ body {font-family: "Raleway", Arial, sans-serif}
 </div>
 
 <!-- Footer / About Section -->
-<footer class="w3-padding-16 w3-center w3-border-top w3-border-grey w3-margin-top">
-  <p class="w3-center"> © 2018 Anna Gye</p>
+<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+  <h2>About</h2>
+  <img src="/images/annagye.jpg" class="w3-image w3-padding-32" width="300" height="300">
+  <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+    <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    <p class="w3-large w3-text-pink">Do not hesitate to contact me!</p>
+    <div class="w3-section">
+      <label><b>Name</b></label>
+      <input class="w3-input w3-border" type="text" required name="Name">
+    </div>
+    <div class="w3-section">
+      <label><b>Email</b></label>
+      <input class="w3-input w3-border" type="text" required name="Email">
+    </div>
+    <div class="w3-section">
+      <label><b>Message</b></label>
+      <input class="w3-input w3-border" required name="Message">
+    </div>
+    <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
+  </form>
+  <br>
 </footer>
 
 <script>
@@ -87,16 +91,6 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " w3-red";
 }
-
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-
 </script>
 
 </body>
