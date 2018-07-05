@@ -1,50 +1,50 @@
-[debug] [2018-07-04T10:43:24.591Z] ----------------------------------------------------------------------
-[debug] [2018-07-04T10:43:24.591Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jo\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-07-04T10:43:24.591Z] CLI Version:   3.19.2
-[debug] [2018-07-04T10:43:24.591Z] Platform:      win32
-[debug] [2018-07-04T10:43:24.591Z] Node Version:  v8.9.4
-[debug] [2018-07-04T10:43:24.591Z] Time:          Wed Jul 04 2018 18:43:24 GMT+0800 (Chine)
-[debug] [2018-07-04T10:43:24.591Z] ----------------------------------------------------------------------
+[debug] [2018-07-05T08:59:42.019Z] ----------------------------------------------------------------------
+[debug] [2018-07-05T08:59:42.019Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jo\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-07-05T08:59:42.019Z] CLI Version:   3.19.2
+[debug] [2018-07-05T08:59:42.019Z] Platform:      win32
+[debug] [2018-07-05T08:59:42.019Z] Node Version:  v8.9.4
+[debug] [2018-07-05T08:59:42.019Z] Time:          Thu Jul 05 2018 16:59:42 GMT+0800 (Chine)
+[debug] [2018-07-05T08:59:42.019Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-07-04T10:43:24.607Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-07-04T10:43:24.607Z] > authorizing via signed-in user
-[debug] [2018-07-04T10:43:24.607Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-07-04T10:43:24.607Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2018-07-05T08:59:42.035Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-05T08:59:42.035Z] > authorizing via signed-in user
+[debug] [2018-07-05T08:59:42.035Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-07-05T08:59:42.035Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  { refresh_token: '1/FjnZolO7N3W7vFQHCpxL050EtWX3Sn-01t6mYDOP5g0',
   client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
   client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
   grant_type: 'refresh_token',
   scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Wed Jul 04 2018 18:43:24 GMT+0800 (Chine)
-[debug] [2018-07-04T10:43:24.754Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-04T10:43:24.765Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/annagye-51a05  
+ Thu Jul 05 2018 16:59:42 GMT+0800 (Chine)
+[debug] [2018-07-05T08:59:42.135Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-05T08:59:42.151Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/annagye-51a05  
   
- Wed Jul 04 2018 18:43:24 GMT+0800 (Chine)
-[debug] [2018-07-04T10:43:25.654Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-04T10:43:25.654Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/annagye-51a05/tokens  
+ Thu Jul 05 2018 16:59:42 GMT+0800 (Chine)
+[debug] [2018-07-05T08:59:43.338Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-05T08:59:43.338Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/annagye-51a05/tokens  
   
- Wed Jul 04 2018 18:43:25 GMT+0800 (Chine)
-[debug] [2018-07-04T10:43:26.502Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-04T10:43:26.502Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/annagye-51a05  
+ Thu Jul 05 2018 16:59:43 GMT+0800 (Chine)
+[debug] [2018-07-05T08:59:44.169Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-05T08:59:44.169Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/annagye-51a05  
   
- Wed Jul 04 2018 18:43:26 GMT+0800 (Chine)
-[debug] [2018-07-04T10:43:27.768Z] <<< HTTP RESPONSE 200
+ Thu Jul 05 2018 16:59:44 GMT+0800 (Chine)
+[debug] [2018-07-05T08:59:45.405Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'E:\site\git projects\annagye'...
 [info] 
 [info] i  functions: Preparing to emulate functions.
-[debug] [2018-07-04T10:43:28.568Z] Fetching environment
-[debug] [2018-07-04T10:43:28.568Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/869419351114:getServerAppConfig  
+[debug] [2018-07-05T08:59:46.226Z] Fetching environment
+[debug] [2018-07-05T08:59:46.226Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/869419351114:getServerAppConfig  
   
- Wed Jul 04 2018 18:43:28 GMT+0800 (Chine)
-[debug] [2018-07-04T10:43:28.568Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/869419351114/clients/_:getWebAppConfig  
+ Thu Jul 05 2018 16:59:46 GMT+0800 (Chine)
+[debug] [2018-07-05T08:59:46.226Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/869419351114/clients/_:getWebAppConfig  
   
- Wed Jul 04 2018 18:43:28 GMT+0800 (Chine)
-[debug] [2018-07-04T10:43:29.118Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-04T10:43:29.133Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-04T10:43:29.133Z] Starting @google-cloud/functions-emulator
+ Thu Jul 05 2018 16:59:46 GMT+0800 (Chine)
+[debug] [2018-07-05T08:59:46.789Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: ./
 [info] +  hosting: Local server: http://localhost:5000
 
-[debug] [2018-07-04T10:43:30.670Z] Parsing function triggers
+[debug] [2018-07-05T08:59:46.820Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-05T08:59:46.820Z] Starting @google-cloud/functions-emulator
+[debug] [2018-07-05T08:59:48.374Z] Parsing function triggers
 [info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
