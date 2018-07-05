@@ -13,7 +13,6 @@ body {font-family: "Raleway", Arial, sans-serif}
   cursor: pointer;
 }
 .mySlides:hover{opacity: 0.9}
-
 a{
     text-decoration: none;
 }
@@ -28,11 +27,11 @@ a:hover{
   <div class="w3-bar w3-white w3-xlarge w3-padding-16 w3-border-bottom w3-border-grey">
     <a class="w3-bar-item w3-hide-large w3-right w3-padding-large w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-left w3-bar-item w3-padding-large">Anna Gye</a>
-    <a href="contact.html" class="w3-right w3-bar-item w3-hide-small w3-hide-medium w3-padding-large">Contact</a>
+    <a href="contact.html" class="w3-right w3-bar-item w3-hide-small w3-hide-medium w3-padding-large" style="color:blue">Contact</a>
     <a href="travel.html" class="w3-right w3-bar-item w3-hide-small w3-hide-medium w3-padding-large">Travel</a>
     <a href="flower.html" class="w3-right w3-bar-item w3-hide-small w3-hide-medium w3-padding-large">Flower</a>
     <a href="home.html" class="w3-right w3-bar-item w3-hide-small w3-hide-medium w3-padding-large">Home</a>
-    <a href="art.html" class="w3-right w3-bar-item w3-hide-small w3-hide-medium w3-padding-large" style="color:blue">Art</a>
+    <a href="art.html" class="w3-right w3-bar-item w3-hide-small w3-hide-medium w3-padding-large">Art</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -49,35 +48,35 @@ a:hover{
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="padding:128px 16px">
 
-  <!-- Header
-  <header class="w3-container w3-xlarge w3-padding-16 w3-border-bottom w3-border-grey w3-margin-bottom w3-margin-top">
-    <a href="#" class="w3-left w3-button w3-white">MY ART</a>
-    <a href="#about" class="w3-right w3-button w3-white">About</a>
-  </header>-->
-
-  <!-- Slideshow -->
-  <div class="w3-center">
-    <button class="w3-button demo" onclick="currentDiv(1)">1</button>
-    <button class="w3-button demo" onclick="currentDiv(2)">2</button>
-    <div class="w3-section">
-      <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
-      <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <img class="mySlides" src="images/annagye.jpg" onclick="onClick(this)" alt="caption 1" style="width:100%;height:400px;">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Seoul, Korea<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +82 151515<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+      </div>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
     </div>
   </div>
 
-  <div class="w3-content w3-row" style="max-width:800px;">
-    <img class="mySlides" src="images/art.png" onclick="onClick(this)" alt="caption 1" style="width:100%">
-    <img class="mySlides" src="images/art2.png" onclick="onClick(this)" alt="caption 2" style="width:100%">
-  </div>
-
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <p id="caption"></p>
-      <img id="img01" class="w3-image">
-    </div>
-  </div>
 
 <!-- End Page Content -->
 </div>
@@ -88,32 +87,6 @@ a:hover{
 </footer>
 
 <script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-red", "");
-  }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-red";
-}
 
 function myFunction() {
     var x = document.getElementById("navDemo");
@@ -122,13 +95,6 @@ function myFunction() {
     } else {
         x.className = x.className.replace(" w3-show", "");
     }
-}
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
 }
 
 </script>
