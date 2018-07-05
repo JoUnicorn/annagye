@@ -16,7 +16,9 @@ body {font-family: "Raleway", Arial, sans-serif}
   display: inline-block;
   overflow: hidden;
   margin: 0;
+  cursor: pointer
 }
+.mySlides:hover{opacity: 0.9}
 
 div > img {
   display: block;
@@ -79,10 +81,18 @@ a:hover{
   </div>
 
   <div class="w3-content w3-row" >
-    <img class="mySlides" src="images/art.png" >
-    <img class="mySlides" src="images/art2.png" >
+    <img class="mySlides" src="images/art.png" onclick="onClick(this)" alt="caption 1">
+    <img class="mySlides" src="images/art2.png" onclick="onClick(this)" alt="caption 2">
   </div>
 
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
 
 <!-- End Page Content -->
 </div>
@@ -127,6 +137,13 @@ function myFunction() {
     } else {
         x.className = x.className.replace(" w3-show", "");
     }
+}
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
 }
 
 </script>
