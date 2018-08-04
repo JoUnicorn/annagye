@@ -36,55 +36,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center">
     <div class="w3-third">
-      <a href="art"><img src="images/art/art.png" alt="Sandwich" style="width:100%"></a>
+      <a href="art"><img src="images/art/art.png" alt="art" onclick="onClick(this)" style="width:100%"></a>
       <h3>Art & Collector</h3>
       <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
     </div>
     <div class="w3-third">
-      <img src="images/art/art.png" alt="Steak" style="width:100%">
+      <img src="images/art/art2.png" alt="art2" onclick="onClick(this)" style="width:100%">
       <h3>Gourmet</h3>
       <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
     </div>
-    <div class="w3-third">
-      <img src="images/interior/flower.png" alt="Cherries" style="width:100%">
-      <h3>Interior & Still Life</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
   </div>
 
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-third">
-      <img src="images/art/art.png" alt="Pasta and Wine" style="width:100%">
-      <h3>People</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-third">
-      <img src="images/travel/travel.png" alt="Popsicle" style="width:100%">
-      <h3>Travel & Architecture</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-third">
-      <img src="images/art/art.png" alt="Salmon" style="width:100%">
-      <h3>Video</h3>
-      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-  </div>
 
-  <hr id="about">
-
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32 w3-center">
-    <h3>Info</h3><br>
-    <div class="w3-padding-32">
-      <h4><b>For any contents inquiries:</b></h4>
-      <h6><i>Please email me at</i></h6>
-      <p>adoreannag@gmail.com</p>
-      <h4><b>For any event inquiries:</b></h4>
-      <h6><i>Please contact Miss Madame by Croque Madame Seoul</i></h6>
-      <p>croquemadameseoul@gmail.com</p>
-    </div>
-  </div>
   <hr>
 
   <!-- Footer -->
@@ -109,6 +72,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       </ul>
     </div>
 
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+    
     <div class="w3-third w3-serif">
       <h3>POPULAR TAGS</h3>
       <p>
@@ -132,6 +104,13 @@ function w3_open() {
 
 function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
+}
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
 }
 </script>
 
