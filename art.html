@@ -1,47 +1,89 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Anna Gye</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link href="https://fonts.googleapis.com/css?family=Kirang+Haerang|Modern+Antiqua" rel="stylesheet">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-bar-block .w3-bar-item {padding:20px}
 .w3-third img{opacity: 0.8; cursor: pointer}
 .w3-third img:hover{opacity: 1}
+.w3-top .w3-right a{opacity: 0.8; font-size:25px; margin-right:15px; cursor: pointer; font-family: 'Modern Antiqua', cursive; text-decoration: none;}
+.w3-top .w3-right a:hover{border-bottom: solid;}
+.w3-top .w3-right a.active{border-bottom: solid;}
 </style>
 <body>
 
 <!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button">Close Menu</a>
-  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Work</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Info</a>
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:30%;min-width:300px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <img src="images/logo.png" alt="Lights" style="width:70%; height:70%">
+  </div>
+  <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+    Work <i class="fa fa-caret-down"></i>
+  </a>
+  <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+    <a href="index" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i> Home</a>
+    <a href="art" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Art</a>
+    <a href="gourmet" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Gourmet</a>
+    <a href="interior" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Interior</a>
+    <a href="people" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>People</a>
+    <a href="travel" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Travel</a>
+    <a href="video" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Video</a>
+  </div>
+  <a href="info" onclick="w3_close()" class="w3-bar-item w3-button">Info</a>
 </nav>
 
 <!-- Top menu -->
 <div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <div class="w3-right w3-padding-16"><a href="index">Work</a> <a href="index">Info</a></div>
-    <div class="w3-center w3-padding-16"><img src="images/logo.png" alt="Lights"></div>
+  <div class="w3-white w3-xlarge" style="max-width:1200px;height:90px;margin:auto">
+    <div class="w3-left w3-padding-16"><img src="images/logo.png" alt="Lights"></div>
+    <div class="w3-button w3-padding-16 w3-right w3-hide-medium  w3-hide-large" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">
+      <div class="w3-dropdown-hover" style="background-color: white;">
+        <a class="active w3-hide-small" href="#">Work <i class="fa fa-caret-down"></i></a>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="index" class="w3-bar-item w3-button w3-hover-white">Home</a>
+          <a href="art" class="w3-bar-item w3-button w3-hover-white">Art</a>
+          <a href="gourmet" class="w3-bar-item w3-button w3-hover-white">Gourmet</a>
+          <a href="interior" class="w3-bar-item w3-button w3-hover-white">Interior</a>
+          <a href="people" class="w3-bar-item w3-button w3-hover-white">People</a>
+          <a href="travel" class="w3-bar-item w3-button w3-hover-white">Travel</a>
+          <a href="video" class="w3-bar-item w3-button w3-hover-white">Video</a>
+        </div>
+      </div>
+      <a class="w3-hide-small" href="info">Info</a>
+    </div>
   </div>
 </div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px" id="food">
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:90px">
 
   <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center">
     <div class="w3-third">
-      <img src="images/art/art.png" alt="art" onclick="onClick(this)" style="width:100%">
+      <img src="images/art/art0.png" alt="art" onclick="onClick(this)" style="width:100%">
       <h3>Art & Collector</h3>
       <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
     </div>
     <div class="w3-third">
+      <img src="images/art/art1.png" alt="art2" onclick="onClick(this)" style="width:100%">
+      <h3>art2</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-third">
       <img src="images/art/art2.png" alt="art2" onclick="onClick(this)" style="width:100%">
+      <h3>art2</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-third">
+      <img src="images/art/art3.png" alt="art2" onclick="onClick(this)" style="width:100%">
       <h3>art2</h3>
       <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
     </div>
@@ -52,24 +94,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
   <!-- Footer -->
   <footer class="w3-row-padding w3-padding-32">
-    <div class="w3-third">
-      <h3>FOOTER</h3>
-      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <p>Powered by Jo</p>
-    </div>
-
-    <div class="w3-third">
-      <h3>BLOG POSTS</h3>
-      <ul class="w3-ul w3-hoverable">
-        <li class="w3-padding-16">
-          <span class="w3-large">Lorem</span><br>
-          <span>Sed mattis nunc</span>
-        </li>
-        <li class="w3-padding-16">
-          <span class="w3-large">Ipsum</span><br>
-          <span>Praes tinci sed</span>
-        </li>
-      </ul>
+    <div class="w3-half">
+      <h3>Contacts</h3>
+      <p>Don't hesitate to contact me, please click <a href="info" style="text-decoration: none; color:blue;">here</a> for my contact details.</p>
     </div>
 
     <!-- Modal for full size images on click-->
@@ -81,15 +108,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       </div>
     </div>
 
-    <div class="w3-third w3-serif">
-      <h3>POPULAR TAGS</h3>
+    <div class="w3-half w3-serif">
+      <h3>Popular tags</h3>
       <p>
-        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Art</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Gourmet</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Interior</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Still life</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">People</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Architecture</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Video</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Adventure</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Lifestyle</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New</span>
       </p>
+    </div>
+    <div class="w3-row-padding w3-padding-16 w3-center">
+      <p>Powered by Jo</p>
     </div>
   </footer>
 
@@ -112,6 +141,27 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+// Accordion
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+function caretin(x){
+  x.children[0].style.display = "inline";
+}
+function caretout(x){
+  x.children[0].style.display = "none";
+
+}
+
 </script>
 
 </body>
