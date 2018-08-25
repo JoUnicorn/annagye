@@ -193,7 +193,7 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "inline";
   var captionText = document.getElementById("caption");
-  console.log(document.getElementById("truc").style.width);
+  console.log(document.getElementById("truc").offsetWidth);
   captionText.style.width=x[slideIndex-1].naturalWidth + "px";
   captionText.innerHTML = x[slideIndex-1].src.split("/").pop().split(".").shift();
 }
