@@ -15,6 +15,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-top .w3-right a{opacity: 0.8; font-size:25px; margin-right:15px; cursor: pointer; font-family: 'Modern Antiqua', cursive; text-decoration: none;}
 .w3-top .w3-right a:hover{border-bottom: solid;}
 .w3-top .w3-right a.active{border-bottom: solid;}
+.mySlides {display:none;}
 </style>
 <body>
 
@@ -28,13 +29,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     Work <i class="fa fa-caret-down"></i>
   </a>
   <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-    <a href="index" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i> Home</a>
-    <a href="art" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Art</a>
-    <a href="gourmet" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Gourmet</a>
-    <a href="interior" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Interior</a>
-    <a href="people" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>People</a>
-    <a href="travel" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Travel</a>
-    <a href="video" onmouseover="caretin(this)" onmouseout="caretout(this)" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Video</a>
+    <a href="/" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i> Home</a>
+    <a href="art" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Art</a>
+    <a href="gourmet" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Gourmet</a>
+    <a href="interior" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Interior</a>
+    <a href="people" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>People</a>
+    <a href="travel" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Travel</a>
+    <a href="video" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-caret-right w3-margin-right" style="display:none;"></i>Video</a>
   </div>
   <a href="info" onclick="w3_close()" class="w3-bar-item w3-button">Info</a>
 </nav>
@@ -42,13 +43,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <!-- Top menu -->
 <div class="w3-top">
   <div class="w3-white w3-xlarge" style="max-width:1200px;height:80px;margin:auto">
-    <div class="w3-left w3-padding-16"><img src="images/logo.png" alt="Lights"></div>
-    <div class="w3-button w3-padding-16 w3-right w3-hide-medium  w3-hide-large" onclick="w3_open()">☰</div>
+    <div class="w3-left w3-padding-16"><a href="/"><img src="images/logo.png"></a></div>
+    <div class="w3-button w3-right w3-hide-medium  w3-hide-large" onclick="w3_open()" style="padding-top:20px;">☰</div>
     <div class="w3-right w3-padding-16">
       <div class="w3-dropdown-hover" style="background-color: white;">
         <a class="active w3-hide-small" href="#">Work <i class="fa fa-caret-down"></i></a>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="index" class="w3-bar-item w3-button w3-hover-white">Home</a>
+          <a href="/" class="w3-bar-item w3-button w3-hover-white">Home</a>
           <a href="art" class="w3-bar-item w3-button w3-hover-white">Art</a>
           <a href="gourmet" class="w3-bar-item w3-button w3-hover-white">Gourmet</a>
           <a href="interior" class="w3-bar-item w3-button w3-hover-white">Interior</a>
@@ -68,19 +69,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center">
     <div class="w3-third">
-      <img src="images/art/art0.png" alt="art" onclick="onClick(this)" style="width:100%">
+      <img src="images/art/art0.png" alt="1" onclick="onClick(this)" style="width:100%">
+      <p> </p>
     </div>
     <div class="w3-third">
-      <img src="images/art/art1.png" alt="art2" onclick="onClick(this)" style="width:100%">
+      <img src="images/art/art1.png" alt="2" onclick="onClick(this)" style="width:100%">
+      <p> </p>
     </div>
     <div class="w3-third">
-      <img src="images/art/art2.png" alt="art2" onclick="onClick(this)" style="width:100%">
+      <img src="images/art/art2.png" alt="3" onclick="onClick(this)" style="width:100%">
+      <p> </p>
     </div>
-    <hr>
-  </div>
-  <div class="w3-row-padding w3-padding-16 w3-center">
     <div class="w3-third">
-      <img src="images/art/art3.png" alt="art2" onclick="onClick(this)" style="width:100%">
+      <img src="images/art/art3.png" alt="4" onclick="onClick(this)" style="width:100%">
+      <p> </p>
     </div>
   </div>
 
@@ -92,15 +94,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <div class="w3-half">
       <h3>Contacts</h3>
       <p>Don't hesitate to contact me, please click <a href="info" style="text-decoration: none; color:blue;">here</a> for my contact details.</p>
-    </div>
-
-    <!-- Modal for full size images on click-->
-    <div id="modal01" class="w3-modal" style="padding-top:0" onclick="this.style.display='none'">
-      <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-        <img id="img01" class="w3-image">
-        <p class="w3-white" id="caption"></p>
-      </div>
     </div>
 
     <div class="w3-half w3-serif">
@@ -117,6 +110,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     </div>
   </footer>
 
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal" style="padding-top:0px">
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <span class="w3-button w3-black w3-xlarge w3-display-topleft" onclick="this.parentNode.parentNode.style.display='none'"><i class="fa fa-remove"></i></span>
+      <img src="images/art/art0.png" class="w3-image mySlides">
+      <img src="images/art/art1.png" class="w3-image mySlides">
+      <img src="images/art/art2.png" class="w3-image mySlides">
+      <img src="images/art/art3.png" class="w3-image mySlides">
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      <p class="w3-white" id="caption" style="margin:auto;margin-top:10px;"></p>
+    </div>
+  </div>
+
 <!-- End page content -->
 </div>
 
@@ -131,10 +138,12 @@ function w3_close() {
 }
 // Modal Image Gallery
 function onClick(element) {
-  document.getElementById("img01").src = element.src;
+  slideIndex=parseInt(element.alt);
+  showDivs(slideIndex);
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
+  captionText.style.width=element.naturalWidth + "px";
+  captionText.innerHTML = element.src.split("/").pop().split(".").shift();
 }
 // Accordion
 function myAccFunc() {
@@ -155,6 +164,27 @@ function caretin(x){
 function caretout(x){
   x.children[0].style.display = "none";
 
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "inline";
+  var captionText = document.getElementById("caption");
+  captionText.style.width=x[slideIndex-1].naturalWidth + "px";
+  captionText.innerHTML = x[slideIndex-1].src.split("/").pop().split(".").shift();
 }
 
 </script>
