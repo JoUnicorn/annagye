@@ -152,7 +152,7 @@ function onClick(element) {
   showDivs(slideIndex);
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
-  captionText.style.width=Math.max(element.naturalWidth,document.getElementById("truc").offsetWidth) + "px";
+  captionText.style.width=Math.min(element.naturalWidth,document.getElementById("truc").offsetWidth) + "px";
   captionText.innerHTML = element.src.split("/").pop().split(".").shift();
 }
 // Accordion
@@ -193,7 +193,7 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "inline";
   var captionText = document.getElementById("caption");
-  captionText.style.width=Math.max(x[slideIndex-1].naturalWidth, document.getElementById("truc").offsetWidth) + "px";
+  captionText.style.width=Math.min(x[slideIndex-1].naturalWidth, document.getElementById("truc").offsetWidth) + "px";
   captionText.innerHTML = x[slideIndex-1].src.split("/").pop().split(".").shift();
 }
 
