@@ -151,9 +151,8 @@ function onClick(element) {
   slideIndex=parseInt(element.alt);
   showDivs(slideIndex);
   document.getElementById("modal01").style.display = "block";
-  console.log(document.getElementById("truc").offsetWidth);
   var captionText = document.getElementById("caption");
-  captionText.style.width=element.naturalWidth + "px";
+  captionText.style.width=Math.max(element.naturalWidth,document.getElementById("truc").offsetWidth) + "px";
   captionText.innerHTML = element.src.split("/").pop().split(".").shift();
 }
 // Accordion
@@ -194,8 +193,7 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "inline";
   var captionText = document.getElementById("caption");
-  console.log(document.getElementById("truc").offsetWidth);
-  captionText.style.width=x[slideIndex-1].naturalWidth + "px";
+  captionText.style.width=Math.max(x[slideIndex-1].naturalWidth, document.getElementById("truc").offsetWidth) + "px";
   captionText.innerHTML = x[slideIndex-1].src.split("/").pop().split(".").shift();
 }
 
