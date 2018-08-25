@@ -151,6 +151,7 @@ function onClick(element) {
   slideIndex=parseInt(element.alt);
   showDivs(slideIndex);
   document.getElementById("modal01").style.display = "block";
+  console.log(document.getElementById("truc").offsetWidth);
   var captionText = document.getElementById("caption");
   captionText.style.width=element.naturalWidth + "px";
   captionText.innerHTML = element.src.split("/").pop().split(".").shift();
