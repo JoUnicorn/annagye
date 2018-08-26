@@ -26,7 +26,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 </style>
 <body>
 
-<div id="flou">
   <!-- Sidebar (hidden by default) -->
   <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:30%;min-width:300px" id="mySidebar">
     <div class="w3-container w3-display-container w3-padding-16">
@@ -48,6 +47,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     <a href="info" onclick="w3_close()" class="w3-bar-item w3-button">Info</a>
   </nav>
 
+<div id="flou">
   <!-- Top menu -->
   <div class="w3-top">
     <div class="w3-white w3-xlarge" style="max-width:1200px;height:100px;margin:auto">
@@ -165,6 +165,7 @@ function modal_close() {
 function onClick(element) {
   slideIndex=parseInt(element.alt);
   showDivs(slideIndex);
+  document.getElementById("flou").setAttribute('class', 'flou');
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.style.width=Math.min(element.naturalWidth,document.getElementById("truc").offsetWidth) + "px";
