@@ -16,8 +16,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-top .w3-right a:hover{border-bottom: solid;}
 .w3-top .w3-right a.active{border-bottom: solid;}
 .mySlides {display:none;}
+.flou{
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+}
 </style>
-<body class="flou">
+<body id="flou">
 
 <!-- Sidebar (hidden by default) -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:30%;min-width:300px" id="mySidebar">
@@ -122,7 +129,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal" style="padding-top:0px">
     <div id="truc" class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <span class="w3-button w3-black w3-xlarge w3-display-topleft" onclick="this.parentNode.parentNode.style.display='none'"><i class="fa fa-remove"></i></span>
+      <span class="w3-button w3-black w3-xlarge w3-display-topleft" onclick="modal_close()"><i class="fa fa-remove"></i></span>
       <img src="images/art/art0.png" class="w3-image mySlides">
       <img src="images/art/art1.png" class="w3-image mySlides">
       <img src="images/art/art2.png" class="w3-image mySlides">
@@ -146,10 +153,17 @@ function w3_open() {
 function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
 }
+
+function modal_close() {
+    document.getElementById("modal01").style.display="none";
+    document.getElementById("flou").setAttribute('class', null);
+}
+
 // Modal Image Gallery
 function onClick(element) {
   slideIndex=parseInt(element.alt);
   showDivs(slideIndex);
+  document.getElementById("flou").setAttribute('class', 'flou');
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.style.width=Math.min(element.naturalWidth,document.getElementById("truc").offsetWidth) + "px";
@@ -212,7 +226,7 @@ document.onkeydown = function(evt) {
         isLeft = (evt.keyCode == 37);
     }
     if (isEscape) {
-      document.getElementById("modal01").style.display="none";
+      modal_close();
     }
     if (isRight) {
       plusDivs(1);
