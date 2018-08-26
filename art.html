@@ -197,6 +197,12 @@ function showDivs(n) {
   captionText.innerHTML = x[slideIndex-1].src.split("/").pop().split(".").shift();
 }
 
+$(document).keyup(function(e) {
+     if (e.keyCode == 27) {
+       document.getElementById("modal01").style.display="none";
+    }
+});
+
 </script>
 
 </body>
