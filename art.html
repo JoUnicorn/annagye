@@ -48,7 +48,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   </nav>
 
   <!-- Top menu -->
-  <div class="w3-top">
+  <div id="flou2" class="w3-top">
     <div class="w3-white w3-xlarge" style="max-width:1200px;height:100px;margin:auto">
       <div class="w3-left w3-padding-16 w3-hide-small">
         <a href="index"><img src="images/logo.png"></a>
@@ -157,6 +157,7 @@ function w3_close() {
 function modal_close() {
     document.getElementById("modal01").style.display="none";
     document.getElementById("flou").setAttribute('class', 'w3-main w3-content w3-padding');
+    document.getElementById("flou2").setAttribute('class', 'w3-top');
 }
 
 // Modal Image Gallery
@@ -164,6 +165,7 @@ function onClick(element) {
   slideIndex=parseInt(element.alt);
   showDivs(slideIndex);
   document.getElementById("flou").setAttribute('class', 'flou w3-main w3-content w3-padding');
+  document.getElementById("flou2").setAttribute('class', 'flou w3-top');
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.style.width=Math.min(element.naturalWidth,document.getElementById("truc").offsetWidth) + "px";
