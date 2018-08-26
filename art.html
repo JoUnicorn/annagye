@@ -201,10 +201,12 @@ document.onkeydown = function(evt) {
     evt = evt || window.event;
     var isEscape = false;
     if ("key" in evt) {
+        console.log(evt.key);
         isEscape = (evt.key == "Escape" || evt.key == "Esc");
         isRight = (evt.key == "right arrow");
         isLeft = (evt.key == "left arrow");
     } else {
+        console.log(evt.keyCode);
         isEscape = (evt.keyCode == 27);
         isRight = (evt.keyCode == 39);
         isLeft = (evt.keyCode == 37);
