@@ -165,7 +165,6 @@ function modal_close() {
 function onClick(element) {
   slideIndex=parseInt(element.alt);
   showDivs(slideIndex);
-  document.getElementById("flou").setAttribute('class', 'flou');
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.style.width=Math.min(element.naturalWidth,document.getElementById("truc").offsetWidth) + "px";
