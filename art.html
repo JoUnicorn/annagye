@@ -210,8 +210,8 @@ document.onkeydown = function(evt) {
     if ("key" in evt) {
         console.log(evt.key);
         isEscape = (evt.key == "Escape" || evt.key == "Esc");
-        isRight = (evt.key == "right arrow");
-        isLeft = (evt.key == "left arrow");
+        isRight = (evt.key == "ArrowRight");
+        isLeft = (evt.key == "ArrowLeft");
     } else {
         console.log(evt.keyCode);
         isEscape = (evt.keyCode == 27);
