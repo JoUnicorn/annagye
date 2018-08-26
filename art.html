@@ -202,11 +202,21 @@ document.onkeydown = function(evt) {
     var isEscape = false;
     if ("key" in evt) {
         isEscape = (evt.key == "Escape" || evt.key == "Esc");
+        isRight = (evt.key == "right arrow");
+        isLeft = (evt.key == "left arrow");
     } else {
         isEscape = (evt.keyCode == 27);
+        isRight = (evt.keyCode == 39);
+        isLeft = (evt.keyCode == 37);
     }
     if (isEscape) {
       document.getElementById("modal01").style.display="none";
+    }
+    if (isRight) {
+      plusDivs(1);
+    }
+    if (isLeft) {
+      plusDivs(-1);
     }
 };
 
